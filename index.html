@@ -15,9 +15,9 @@
 	<style>
 
 
-		.container {
-			color: black;
-			background-color: #C0C0C0;
+		.mainheader {
+			/*color: black;
+			background-color: #C0C0C0;*/
 			font-family: 'Playfair Display SC', serif;
 		}
 		.center {
@@ -58,7 +58,7 @@
 		}
 
 		.sidebar {
-			border: 1px solid red;
+			/*border: 1px solid red;*/
 		}
 
 	</style>
@@ -67,28 +67,27 @@
   <script type="application/processing" data-processing-target="pjs">
 		void setup() {
 		  
-		  size(600,500); 
+		  size(600,1100); 
 		  background(100); 
 		  
 		}
 
 		void draw() {
-
 		  
-		 int men = 80; 
-		 int women= 50; 
+		 int men = 988; 
+		 int women= 334; 
 		  //for the men 
-		      for (int i = 0; i < men; i = i+12) {
+		      for (int i = 0; i < men; i = i+8) {
 		        stroke(100,100,255); 
-		        strokeWeight(6);
+		        strokeWeight(4);
 		        
 		      line(0, i, 290, i);
 		    }
 		    
 		    
-		    for (int i=0; i< women; i= i+12) {
+		    for (int i=0; i< women; i= i+8) {
 		       stroke(255,100,100); 
-		        strokeWeight(6);
+		        strokeWeight(4);
 		        
 		      line(310,i,600,i); 
 		      
@@ -98,9 +97,9 @@
  </script>
 
 
-	<div class="container">
+	<div class="container-fluid">
 		<div class="row">
-			<div class="col-xs-12 center" style="font-size:25px">
+			<div class="col-xs-12 mainheader center" style="font-size:25px">
 			<h1>THE GENDER REPORT</h1>
 			</div>
 		</div>
@@ -112,9 +111,10 @@
 			<div class="row">
 				<div class="col-xs-3 sidebar">	
 
-					<button onclick="showData1()">By News Desk</button>
-					<button onclick="JavaScript:alert('Well done!')">By Year</button>
-					<button onclick="JavaScript:alert('Well done!')">By Front Page</button>
+					<button onclick="JavaScript:alert('TODAYYY!')">Today</button>
+					<button onclick="showData1()">By Gender Over Time</button>
+					<button onclick="showData2()">By Newsdesk</button>
+					<button onclick="JavaScript:alert('click!')">By Front Page</button>
 
 				</div>
 				<!--Body-->
