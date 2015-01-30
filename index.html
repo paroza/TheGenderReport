@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TheGenderReport</title>
+
+<!-- YOU DONT NEED CDN BECAUSE YOU DOWNLOAD YOUR OWN CNFIGURATED FILE-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+
+	 <link href='http://fonts.googleapis.com/css?family=Playfair+Display+SC:400,900italic' rel='stylesheet' type='text/css'>
+
+ 	<script type= "text/javascript" src= "http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"> </script>
+ 	<script src="Js/processing.min.js"></script>
+
+	<style>
+
+
+		.container {
+			color: black;
+			background-color: #C0C0C0;
+			font-family: 'Playfair Display SC', serif;
+		}
+		.center {
+			text-align: center;
+		}
+
+		.header-center {
+			font-size:20px;
+			text-align:center;
+			padding: 20px;
+		}
+		.button {
+	/*		float:left;*/
+			padding: 50px;
+			text-align:center;
+			/*margin:40%;*/
+			font-color:red;
+
+		}
+
+		.hide {
+			display:none;
+		}
+		input, button, select, textarea {
+			padding:50px;
+			margin-top:10%;
+			margin-bottom:10%;
+			margin-left:10%;
+			border-radius: 20px;
+			font-color:red;
+			font-size: 15px;
+			background-color: #6666CC;
+			
+		}
+
+		.main{
+			padding: 20px;
+		}
+
+		.sidebar {
+			border: 1px solid red;
+		}
+
+	</style>
+</head>
+<body>
+  <script type="application/processing" data-processing-target="pjs">
+		void setup() {
+		  
+		  size(600,500); 
+		  background(100); 
+		  
+		}
+
+		void draw() {
+
+		  
+		 int men = 80; 
+		 int women= 50; 
+		  //for the men 
+		      for (int i = 0; i < men; i = i+12) {
+		        stroke(100,100,255); 
+		        strokeWeight(6);
+		        
+		      line(0, i, 290, i);
+		    }
+		    
+		    
+		    for (int i=0; i< women; i= i+12) {
+		       stroke(255,100,100); 
+		        strokeWeight(6);
+		        
+		      line(310,i,600,i); 
+		      
+		    }
+		}
+
+ </script>
+
+
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 center" style="font-size:25px">
+			<h1>THE GENDER REPORT</h1>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12 center" style="padding: 10px">
+			There are so many statistics that report that for women that work in journalism, their work appears on the front page less than men's. This kind of systematic sexism is dangerous to both the perceptions of how we see women in the media as well as how the women that make media are treated. 
+			</div>
+		</div>
+			<div class="row">
+				<div class="col-xs-3 sidebar">	
+
+					<button onclick="showData1()">By News Desk</button>
+					<button onclick="JavaScript:alert('Well done!')">By Year</button>
+					<button onclick="JavaScript:alert('Well done!')">By Front Page</button>
+
+				</div>
+				<!--Body-->
+				<div id="graph" class="col-xs-9 main">
+					<div class="row">
+						<div class="col-xs-9">
+						 	<canvas id="pjs"></canvas>
+						</div>
+					</div>
+					
+				</div><!--End of main--> 
+			</div> 
+
+		<div class="row">
+			<div class="col-xs-12 center" style="padding: 20px">
+				Brought to you by Mimi Tam and <a href="http://www.patriciazablah.com">Patricia R. Zablah</a>
+			</div>
+		</div>
+	</div> <!--end container-->
+	
+	<!-- Latest compiled and minified JavaScript and my own main js-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src= "Js/main.js"> </script> 
+
+</body>
+</html>
