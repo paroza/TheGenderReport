@@ -38,7 +38,7 @@ function showData2() {
 function getDataNYT() {
 	console.log("I am in the process and about to call the ajax function");
 	$.ajax({
-		url:"http://api.nytimes.com/svc/search/v2/articlesearch.json?fl=byline&facet_field=section_name&begin_date=20100101&end_date=20150130&api-key=fc509326b88c497dd36d9f8939c9f1eb:13:71126316",
+		url:"http://api.nytimes.com/svc/search/v2/articlesearch.json?fl=byline&facet_field=section_name&begin_date=20100101&end_date=20150130&api-key=###",
 		type: 'GET', 
 		crossDomain:"true",
 			success:function(response){

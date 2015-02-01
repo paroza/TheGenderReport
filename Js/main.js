@@ -34,7 +34,7 @@ function showData1() {
 function getDataNYT() {
 	console.log("I am in the process and about to call the ajax function");
 	$.ajax({
-		url:"http://api.nytimes.com/svc/search/v2/articlesearch.json?fl=byline&facet_field=section_name&begin_date=20100101&end_date=20150130&api-key=fc509326b88c497dd36d9f8939c9f1eb:13:71126316",
+		url:"http://api.nytimes.com/svc/search/v2/articlesearch.json?fl=byline&facet_field=section_name&begin_date=20100101&end_date=20150130&api-key=###",
 		type: 'GET', 
 		crossDomain:"true",
 			success:function(response){
@@ -82,7 +82,7 @@ function getWPData() {
 	console.log("calling WP"); 
         var params = { 
             // Specify your developer key 
-            key: 'F75F9692-6BA5-4950-A227-78F09670392E', 
+            key: '###', 
             // Specify values for optional parameters, as needed 
             //content_set: , 
             //callback: , 

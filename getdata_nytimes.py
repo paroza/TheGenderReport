@@ -16,8 +16,7 @@ search_params = {}
 #search_params['fq'] = 'section_name:("Front Page")'
 search_params['fl'] = 'byline,print_page,news_desk,keywords,pub_date'
 search_params['sort']='newest'
-#search_params['api-key'] = 'b289f107938f18d0bb765d99c4a7f52a:14:71126476'
-search_params['api-key'] = 'fc509326b88c497dd36d9f8939c9f1eb:13:71126316'
+search_params['api-key'] = '###'
 
 #URL for the gender API to determine gender of first names
 genderapi = 'http://api.genderize.io?name='
@@ -48,7 +47,7 @@ for i in range (1,101):
                 article['firstname'] = firstname
                 article['pub_date'] = doc['pub_date']
                 article['news_desk'] = doc['news_desk']
-                article['gender'] = json.load(urllib2.urlopen(genderapi2 + '?name=' + firstname + '&key=QWGXFHAPcQaqfoAewt'))['gender']
+                article['gender'] = json.load(urllib2.urlopen(genderapi2 + '?name=' + firstname + '&key=###'))['gender']
                 #json.load(urllib2.urlopen(genderapi + firstname))['gender']
                 article['print_page'] = doc['print_page']
                 print article
@@ -87,7 +86,7 @@ for i in range (1,101):
                     article['firstname'] = firstname
                     article['pub_date'] = doc['pub_date']
                     article['news_desk'] = doc['news_desk']
-                    article['gender'] = json.load(urllib2.urlopen(genderapi2 + '?name=' + firstname + '&key=QWGXFHAPcQaqfoAewt'))['gender']
+                    article['gender'] = json.load(urllib2.urlopen(genderapi2 + '?name=' + firstname + '&key=###'))['gender']
                     #json.load(urllib2.urlopen(genderapi + firstname))['gender']
                     article['print_page'] = doc['print_page']
                     print article
